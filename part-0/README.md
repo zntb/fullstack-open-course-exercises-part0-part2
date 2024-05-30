@@ -44,7 +44,7 @@ part2
 
 ### 0.4: New note diagram
 
-> In the section [Loading a page containing JavaScript - review](https://fullstackopen.com/en/part0/fundamentals_of_web_apps#loading-a-page-containing-java-script-review), the chain of events caused by opening the page https://studies.cs.helsinki.fi/exampleapp/notes is depicted as a [sequence diagram](https://www.geeksforgeeks.org/unified-modeling-language-uml-sequence-diagrams/)
+> In the section [Loading a page containing JavaScript - review](https://fullstackopen.com/en/part0/fundamentals_of_web_apps#loading-a-page-containing-java-script-review), the chain of events caused by opening the page <https://studies.cs.helsinki.fi/exampleapp/notes> is depicted as a [sequence diagram](https://www.geeksforgeeks.org/unified-modeling-language-uml-sequence-diagrams/)
 >
 > The diagram was made as a GitHub Markdown-file using the [Mermaid](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams)-syntax, as follows:
 
@@ -77,7 +77,7 @@ part2
     Note right of browser: The browser executes the callback function that renders the notes
 ```
 
-> **Create a similar diagram** depicting the situation where the user creates a new note on the page https://studies.cs.helsinki.fi/exampleapp/notes by writing something into the text field and clicking the _Save_ button.
+> **Create a similar diagram** depicting the situation where the user creates a new note on the page <https://studies.cs.helsinki.fi/exampleapp/notes> by writing something into the text field and clicking the _Save_ button.
 >
 > If necessary, show operations on the browser or on the server as comments on the diagram.
 >
@@ -87,12 +87,18 @@ part2
 >
 > You can do the diagrams with any program, but perhaps the easiest and the best way to do diagrams is the [Mermaid](https://github.com/mermaid-js/mermaid#sequence-diagram-docs---live-editor) syntax that is now implemented in [Github](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) Markdown pages!
 
+- [Solution](../part-0/0.4.md)
+
 ### 0.5: Single page app diagram
 
-> Create a diagram depicting the situation where the user goes to the [single-page app](https://fullstackopen.com/en/part0/fundamentals_of_web_apps#single-page-app)version of the notes app at https://studies.cs.helsinki.fi/exampleapp/spa.
+> Create a diagram depicting the situation where the user goes to the [single-page app](https://fullstackopen.com/en/part0/fundamentals_of_web_apps#single-page-app)version of the notes app at <https://studies.cs.helsinki.fi/exampleapp/spa>.
+
+- [Solution](../part-0/0.5.md)
 
 ### 0.6: New note in Single page app diagram
 
 > Create a diagram depicting the situation where the user creates a new note using the single-page version of the app.
 >
 > This was the last exercise, and it's time to push your answers to GitHub and mark the exercises as done in the [submission system](https://studies.cs.helsinki.fi/stats/courses/fullstackopen)
+
+- [Solution](../part-0/0.6.md)
