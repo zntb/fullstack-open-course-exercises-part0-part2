@@ -138,3 +138,47 @@ const App = () => {
   return <div>...</div>;
 };
 ```
+
+### 1.4: Course Information step 4
+
+Place the objects into an array. Modify the variable definitions of _App_ into the following form and modify the other parts of the application accordingly:
+
+```jsx
+const App = () => {
+  const course = 'Half Stack application development';
+  const parts = [
+    {
+      name: 'Fundamentals of React',
+      exercises: 10,
+    },
+    {
+      name: 'Using props to pass data',
+      exercises: 7,
+    },
+    {
+      name: 'State of a component',
+      exercises: 14,
+    },
+  ];
+
+  return <div>...</div>;
+};
+```
+
+**NB** at this point _you can assume that there are always three items_, so there is no need to go through the arrays using loops. We will come back to the topic of rendering components based on items in arrays with a more thorough exploration in the [next part of the course](https://fullstackopen.com/en/part2).
+
+However, do not pass different objects as separate props from the _App_ component to the components _Content_ and _Total_. Instead, pass them directly as an array:
+
+```jsx
+const App = () => {
+  // const definitions
+
+  return (
+    <div>
+      <Header course={course} />
+      <Content parts={parts} />
+      <Total parts={parts} />
+    </div>
+  );
+};
+```
