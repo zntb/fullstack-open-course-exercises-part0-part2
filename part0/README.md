@@ -87,13 +87,13 @@ part2
 >
 > You can do the diagrams with any program, but perhaps the easiest and the best way to do diagrams is the [Mermaid](https://github.com/mermaid-js/mermaid#sequence-diagram-docs---live-editor) syntax that is now implemented in [Github](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) Markdown pages!
 
-- [Solution](../part-0/0.4.md)
+- [Solution](../part0/0.4.md)
 
 ### 0.5: Single page app diagram
 
 > Create a diagram depicting the situation where the user goes to the [single-page app](https://fullstackopen.com/en/part0/fundamentals_of_web_apps#single-page-app)version of the notes app at <https://studies.cs.helsinki.fi/exampleapp/spa>.
 
-- [Solution](../part-0/0.5.md)
+- [Solution](../part0/0.5.md)
 
 ### 0.6: New note in Single page app diagram
 
@@ -101,4 +101,4 @@ part2
 >
 > This was the last exercise, and it's time to push your answers to GitHub and mark the exercises as done in the [submission system](https://studies.cs.helsinki.fi/stats/courses/fullstackopen)
 
-- [Solution](../part-0/0.6.md)
+- [Solution](../part0/0.6.md)

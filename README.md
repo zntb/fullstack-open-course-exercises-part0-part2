@@ -4,7 +4,7 @@
 
 ## Table of Contents
 
-- [Part 0: Fundamentals of Web apps](./part-0)
-  - [0.4: new note](part-0/0.4.md)
-  - [0.5: new note](part-0/0.5.md)
-  - [0.6: new note](part-0/0.6.md)
+- [Part 0: Fundamentals of Web apps](./part0)
+  - [0.4: new note](part0/0.4.md)
+  - [0.5: new note](part0/0.5.md)
+  - [0.6: new note](part0/0.6.md)
