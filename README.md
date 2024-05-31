@@ -9,4 +9,4 @@
   - [0.5: new note](part0/0.5.md)
   - [0.6: new note](part0/0.6.md)
 - [Part 1: Introduction to React](./part1)
-  - [1.1: courseinfo](./part1//courseinfo)
+  - [1.1-1.2: courseinfo](./part1/courseinfo)
