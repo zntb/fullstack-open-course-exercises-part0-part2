@@ -102,3 +102,19 @@ const Statistics = (props) => {
 ```
 
 The application's state should still be kept in the root _App_ component.
+
+## 1.11\*: unicafe step 6
+
+Display the statistics in an HTML [table](https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics), so that your application looks roughly like this:
+
+![unicafe4](./assets/unicafe4.png)
+
+Remember to keep your console open at all times. If you see this warning in your console:
+
+![unicafe5](./assets/unicafe5.png)
+
+Then perform the necessary actions to make the warning disappear. Try pasting the error message into a search engine if you get stuck.
+
+_Typical source of an error_ `Unchecked runtime.lastError:` `Could not establish connection. Receiving end does not exist.` _is from a Chrome extension. Try going to_ `chrome://extensions/` _and try disabling them one by one and refreshing React app page; the error should eventually disappear._
+
+**Make sure that from now on you don't see any warnings in your console!**
