@@ -77,3 +77,28 @@ const App = () => {
 Change your application to display statistics only once feedback has been gathered.
 
 ![unicafe3](./assets/unicafe3.png)
+
+## 1.10: unicafe step 5
+
+Let's continue refactoring the application. Extract the following two components:
+
+- _Button_ handles the functionality of each feedback submission button.
+- _StatisticLine_ for displaying a single statistic, e.g. the average score.
+
+To be clear: the _StatisticLine_ component always displays a single statistic, meaning that the application uses multiple components for rendering all of the statistics:
+
+```jsx
+const Statistics = (props) => {
+  /// ...
+  return(
+    <div>
+      <StatisticLine text="good" value ={...} />
+      <StatisticLine text="neutral" value ={...} />
+      <StatisticLine text="bad" value ={...} />
+      // ...
+    </div>
+  )
+}
+```
+
+The application's state should still be kept in the root _App_ component.
