@@ -10,4 +10,4 @@
   - [0.6: new note](part0/0.6.md)
 - [Part 1: Introduction to React](./part1)
   - [1.1-1.5: courseinfo](./part1/courseinfo)
-  - [1.6-1.7: unicafe](part1/unicafe)
+  - [1.6-1.8: unicafe](part1/unicafe)
