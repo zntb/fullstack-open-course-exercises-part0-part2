@@ -71,3 +71,9 @@ const App = () => {
   )
 }
 ```
+
+## 1.9: unicafe step 4
+
+Change your application to display statistics only once feedback has been gathered.
+
+![unicafe3](./assets/unicafe3.png)

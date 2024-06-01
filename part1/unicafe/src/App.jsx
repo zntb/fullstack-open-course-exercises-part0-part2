@@ -8,6 +8,10 @@ const Statistics = ({
   average,
   positivePercentage,
 }) => {
+  if (total === 0) {
+    return <p>No feedback given</p>;
+  }
+
   return (
     <>
       <p>good {good}</p>
