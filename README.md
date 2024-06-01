@@ -11,4 +11,4 @@
 - [Part 1: Introduction to React](./part1)
   - [1.1-1.5: courseinfo](./part1/courseinfo)
   - [1.6-1.11: unicafe](part1/unicafe)
-  - [1.12: anecdotes](part1/anecdotes)
+  - [1.12-1.13: anecdotes](part1/anecdotes)
