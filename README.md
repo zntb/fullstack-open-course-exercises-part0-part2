@@ -13,4 +13,4 @@
   - [1.6-1.11: unicafe](part1/unicafe)
   - [1.12-1.14: anecdotes](part1/anecdotes)
 - [Part 2: Rendering a collection, modules](./part2)
-  - [2.1-2.2: course information](./part2/courseinfo)
+  - [2.1-2.3: course information](./part2/courseinfo)

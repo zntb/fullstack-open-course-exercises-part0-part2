@@ -71,3 +71,24 @@ Ensure that the console shows no errors!
 Show also the sum of the exercises of the course.
 
 ![courseinfo2](./assets/courseinfo2.png)
+
+## 2.3\*: Course information step8
+
+If you haven't done so already, calculate the sum of exercises with the array method [reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce).
+
+**Pro tip:** when your code looks as follows:
+
+```jsx
+const total = parts.reduce((s, p) => someMagicHere);
+```
+
+and does not work, it's worth it to use _console.log_, which requires the arrow function to be written in its longer form:
+
+```jsx
+const total = parts.reduce((s, p) => {
+  console.log('what is happening', s, p);
+  return someMagicHere;
+});
+```
+
+**Not working? :** Use your search engine to look up how `reduce` is used in an **Object Array**.
