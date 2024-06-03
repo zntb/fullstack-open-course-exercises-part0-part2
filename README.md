@@ -14,3 +14,4 @@
   - [1.12-1.14: anecdotes](part1/anecdotes)
 - [Part 2: Rendering a collection, modules](./part2)
   - [2.1-2.5: course information](./part2/courseinfo)
+  - [2.6: phonebook](./part2/phonebook)
