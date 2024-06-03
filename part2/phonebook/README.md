@@ -85,3 +85,25 @@ newName + ' is already added to phonebook';
 ```
 
 Using template strings is the more idiomatic option and the sign of a true JavaScript professional.
+
+## 2.8: The Phonebook Step 3
+
+Expand your application by allowing users to add phone numbers to the phone book. You will need to add a second _input_ element to the form (along with its own event handler):
+
+```jsx
+<form>
+  <div>
+    name: <input />
+  </div>
+  <div>
+    number: <input />
+  </div>
+  <div>
+    <button type="submit">add</button>
+  </div>
+</form>
+```
+
+At this point, the application could look something like this. The image also displays the application's state with the help of [React developer tools](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi):
+
+![phonebook3](./assets/phonebook3.png)
