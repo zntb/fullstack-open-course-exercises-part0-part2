@@ -57,3 +57,31 @@ Note the use of the React developer tools extension in the picture above!
 
 - you can use the person's name as a value of the key property
 - remember to prevent the default action of submitting HTML forms!
+
+## 2.7: The Phonebook Step 2
+
+Prevent the user from being able to add names that already exist in the phonebook. JavaScript arrays have numerous suitable [methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) for accomplishing this task. Keep in mind [how object equality works](https://www.joshbritz.co/blog/why-its-so-hard-to-check-object-equality) in Javascript.
+
+Issue a warning with the [alert](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert) command when such an action is attempted:
+
+![phonebook2](./assets/phonebook2.png)
+
+Hint: when you are forming strings that contain values from variables, it is recommended to use a [template string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals):
+
+```jsx
+`${newName} is already added to phonebook`;
+```
+
+If the `newName` variable holds the value _Arto Hellas_, the template string expression returns the string
+
+```jsx
+`Arto Hellas is already added to phonebook`;
+```
+
+The same could be done in a more Java-like fashion by using the plus operator:
+
+```jsx
+newName + ' is already added to phonebook';
+```
+
+Using template strings is the more idiomatic option and the sign of a true JavaScript professional.
