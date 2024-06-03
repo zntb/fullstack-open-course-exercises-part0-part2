@@ -107,3 +107,28 @@ Expand your application by allowing users to add phone numbers to the phone book
 At this point, the application could look something like this. The image also displays the application's state with the help of [React developer tools](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi):
 
 ![phonebook3](./assets/phonebook3.png)
+
+## 2.9\*: The Phonebook Step 4
+
+Implement a search field that can be used to filter the list of people by name:
+
+![phonebook4](./assets/phonebook4.png)
+
+You can implement the search field as an _input_ element that is placed outside the HTML form. The filtering logic shown in the image is _case insensitive_, meaning that the search term _arto_ also returns results that contain Arto with an uppercase A.
+
+**NB:** When you are working on new functionality, it's often useful to "hardcode" some dummy data into your application, e.g.
+
+```jsx
+const App = () => {
+  const [persons, setPersons] = useState([
+    { name: 'Arto Hellas', number: '040-123456', id: 1 },
+    { name: 'Ada Lovelace', number: '39-44-5323523', id: 2 },
+    { name: 'Dan Abramov', number: '12-43-234345', id: 3 },
+    { name: 'Mary Poppendieck', number: '39-23-6423122', id: 4 },
+  ]);
+
+  // ...
+};
+```
+
+This saves you from having to manually input data into your application for testing out your new functionality.
