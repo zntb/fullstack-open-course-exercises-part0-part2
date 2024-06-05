@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+import personsService from './services/persons';
 
 const Filter = ({ searchTerm, handleSearchChange }) => {
   return (
@@ -51,11 +51,10 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    axios
-      .get('http://localhost:3001/persons')
-      .then((response) => {
-        console.log('Response data:', response.data);
-        setPersons(response.data);
+    personsService
+      .getAll()
+      .then((initialPersons) => {
+        setPersons(initialPersons);
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
@@ -82,13 +81,12 @@ const App = () => {
       alert(`${newName} is already added to the phonebook`);
     } else {
       const personObject = { name: newName, number: newNumber };
-      axios
-        .post('http://localhost:3001/persons', personObject)
-        .then((response) => {
-          setPersons(persons.concat(response.data));
-          setNewName('');
-          setNewNumber('');
-        });
+
+      personsService.create(personObject).then((returnedPerson) => {
+        setPersons(persons.concat(returnedPerson));
+        setNewName('');
+        setNewNumber('');
+      });
     }
   };
 
