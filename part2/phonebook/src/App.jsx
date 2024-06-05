@@ -76,18 +76,45 @@ const App = () => {
 
   const addPerson = (event) => {
     event.preventDefault();
-    const personExists = persons.some((person) => person.name === newName);
+    const existingPerson = persons.find((person) => person.name === newName);
 
-    if (personExists) {
-      alert(`${newName} is already added to the phonebook`);
+    if (existingPerson) {
+      if (
+        window.confirm(
+          `${newName} is already added to the phonebook, replace the old number with a new one?`
+        )
+      ) {
+        const updatedPerson = { ...existingPerson, number: newNumber };
+
+        personsService
+          .update(existingPerson.id, updatedPerson)
+          .then((returnedPerson) => {
+            setPersons(
+              persons.map((person) =>
+                person.id !== existingPerson.id ? person : returnedPerson
+              )
+            );
+
+            setNewName('');
+            setNewNumber('');
+          })
+          .catch((error) => {
+            console.error('Error updating person:', error);
+          });
+      }
     } else {
       const personObject = { name: newName, number: newNumber };
 
-      personsService.create(personObject).then((returnedPerson) => {
-        setPersons(persons.concat(returnedPerson));
-        setNewName('');
-        setNewNumber('');
-      });
+      personsService
+        .create(personObject)
+        .then((returnedPerson) => {
+          setPersons(persons.concat(returnedPerson));
+          setNewName('');
+          setNewNumber('');
+        })
+        .catch((error) => {
+          console.error('Error creating person:', error);
+        });
     }
   };
 
