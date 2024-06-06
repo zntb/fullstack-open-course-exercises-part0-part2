@@ -256,3 +256,11 @@ Change the functionality so that if a number is added to an already existing use
 If the person's information is already in the phonebook, the application can ask the user to confirm the action:
 
 ![phonebook6](./assets/phonebook6.png)
+
+## Exercises 2.16.-2.17
+
+### 2.16: Phonebook step 11
+
+Use the [improved error message](https://fullstackopen.com/en/part2/adding_styles_to_react_app#improved-error-message) example from part 2 as a guide to show a notification that lasts for a few seconds after a successful operation is executed (a person is added or a number is changed):
+
+![phonebook7](./assets/phonebook7.png)
