@@ -45,9 +45,13 @@ const Persons = ({ persons, deletePerson }) => {
   );
 };
 
-const Notification = ({ message }) => {
+const Notification = ({ message, error }) => {
   if (message === null) {
     return null;
+  }
+
+  if (error) {
+    return <div className="error">{message}</div>;
   }
   return <div className="success">{message}</div>;
 };
@@ -58,6 +62,7 @@ const App = () => {
   const [newNumber, setNewNumber] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
   const [successMessage, setSuccessMessage] = useState(null);
+  const [errorMessage, setErrorMessage] = useState(null);
 
   useEffect(() => {
     personsService
@@ -108,6 +113,12 @@ const App = () => {
           })
           .catch((error) => {
             console.error('Error updating person:', error);
+            setErrorMessage(
+              `Information of ${newName} has already been removed from server`
+            );
+            setTimeout(() => {
+              setErrorMessage(null);
+            }, 3000);
           });
       }
     } else {
@@ -152,7 +163,11 @@ const App = () => {
   return (
     <div>
       <h2>Phonebook</h2>
-      <Notification message={successMessage} />
+      {errorMessage ? (
+        <Notification message={errorMessage} error />
+      ) : (
+        <Notification message={successMessage} />
+      )}
       <Filter searchTerm={searchTerm} handleSearchChange={handleSearchChange} />
       <h2>Add a new</h2>
       <PersonForm
