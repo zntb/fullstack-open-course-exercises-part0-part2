@@ -6,6 +6,7 @@ function App() {
   const [value, setValue] = useState('');
   const [query, setQuery] = useState([]);
   const [countries, setCountries] = useState([]);
+  const [selectedCountry, setSelectedCountry] = useState(null);
   const [error, setError] = useState('');
 
   useEffect(() => {
@@ -28,13 +29,20 @@ function App() {
       if (filteredCountries.length > 10) {
         setError('Too many matches, please make your search more specific.');
         setCountries([]);
+        setSelectedCountry(null);
+      } else if (filteredCountries.length === 1) {
+        setError('');
+        setCountries(filteredCountries);
+        setSelectedCountry(filteredCountries[0]);
       } else {
         setError('');
         setCountries(filteredCountries);
+        setSelectedCountry(null);
       }
     } else {
       setCountries([]);
       setError('');
+      setSelectedCountry(null);
     }
   }, [value, query]);
 
@@ -46,21 +54,26 @@ function App() {
     event.preventDefault();
   };
 
+  const handleShowDetails = (country) => {
+    setSelectedCountry(country);
+  };
+
   return (
     <>
       <form onSubmit={handleSearch}>
         find countries <input value={value} onChange={handleChange} />
       </form>
       {error && <p>{error}</p>}
-      {countries.length > 0 && (
+      {selectedCountry ? (
+        <Country country={selectedCountry} />
+      ) : (
         <div>
-          {countries.length === 1 ? (
-            <Country country={countries[0]} />
-          ) : (
-            countries.map((country) => (
-              <div key={country.name.common}>{country.name.common}</div>
-            ))
-          )}
+          {countries.map((country) => (
+            <div key={country.name.common}>
+              {country.name.common}{' '}
+              <button onClick={() => handleShowDetails(country)}>show</button>
+            </div>
+          ))}
         </div>
       )}
     </>
