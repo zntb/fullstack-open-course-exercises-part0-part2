@@ -2,12 +2,15 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Country from './components/Country';
 
+const API_KEY = import.meta.env.VITE_WEATHER_KEY;
+
 function App() {
   const [value, setValue] = useState('');
   const [query, setQuery] = useState([]);
   const [countries, setCountries] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [error, setError] = useState('');
+  const [weather, setWeather] = useState(null);
 
   useEffect(() => {
     axios
@@ -34,6 +37,7 @@ function App() {
         setError('');
         setCountries(filteredCountries);
         setSelectedCountry(filteredCountries[0]);
+        fetchWeather(filteredCountries[0].capital);
       } else {
         setError('');
         setCountries(filteredCountries);
@@ -46,6 +50,21 @@ function App() {
     }
   }, [value, query]);
 
+  const fetchWeather = (capital) => {
+    if (capital) {
+      axios
+        .get(
+          `https://api.openweathermap.org/data/2.5/weather?q=${capital}&appid=${API_KEY}&units=metric`
+        )
+        .then((response) => {
+          setWeather(response.data);
+        })
+        .catch((error) => {
+          console.error('Error fetching weather data:', error);
+        });
+    }
+  };
+
   const handleChange = (event) => {
     setValue(event.target.value);
   };
@@ -56,6 +75,7 @@ function App() {
 
   const handleShowDetails = (country) => {
     setSelectedCountry(country);
+    fetchWeather(country.capital);
   };
 
   return (
@@ -65,7 +85,7 @@ function App() {
       </form>
       {error && <p>{error}</p>}
       {selectedCountry ? (
-        <Country country={selectedCountry} />
+        <Country country={selectedCountry} weather={weather} />
       ) : (
         <div>
           {countries.map((country) => (

@@ -29,3 +29,34 @@ Improve on the application in the previous exercise, such that when the names of
 ![countries4](assets/countries4.png)
 
 In this exercise, it is also enough that your application works for most countries. Countries whose name appears in the name of another country, like _Sudan_, can be ignored.
+
+## 2.20\*: Data for countries, step 3
+
+Add to the view showing the data of a single country, the weather report for the capital of that country. There are dozens of providers for weather data. One suggested API is <https://openweathermap.org>. Note that it might take some minutes until a generated API key is valid
+
+![countries5](assets/countries5.png)
+
+If you use Open weather map, [here](https://openweathermap.org/weather-conditions#Icon-list) is the description for how to get weather icons.
+
+**NB:** In some browsers (such as Firefox) the chosen API might send an error response, which indicates that HTTPS encryption is not supported, although the request URL starts with `http://`. This issue can be fixed by completing the exercise using Chrome.
+
+**NB:** You need an api-key to use almost every weather service. Do not save the api-key to source control! Nor hardcode the api-key to your source code. Instead use an [environment variable](https://vitejs.dev/guide/env-and-mode.html) to save the key.
+
+Assuming the api-key is _54l41n3n4v41m34rv0_, when the application is started like so:
+
+```
+export VITE_SOME_KEY=54l41n3n4v41m34rv0 && npm run dev // For Linux/macOS Bash
+($env:VITE_SOME_KEY="54l41n3n4v41m34rv0") -and (npm run dev) // For Windows PowerShell
+set "VITE_SOME_KEY=54l41n3n4v41m34rv0" && npm run dev // For Windows cmd.exe
+```
+
+you can access the value of the key from the `import.meta.env` object:
+
+```
+const api_key = import.meta.env.VITE_SOME_KEY
+// variable api_key now has the value set in startup
+```
+
+Note that you will need to restart the server to apply the changes.
+
+This was the last exercise of this part of the course. It's time to push your code to GitHub and mark all of your finished exercises to the [exercise submission system](https://studies.cs.helsinki.fi/stats/courses/fullstackopen).
