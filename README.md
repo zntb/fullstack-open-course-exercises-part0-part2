@@ -16,3 +16,5 @@
   - [2.1-2.5: course information](./part2/courseinfo)
   - [2.6-2.11; 2.12-2.15; 2.16-2.17: phonebook](./part2/phonebook)
   - [2.18-2.20: countries](./part2/countries)
+- [Part 3: Programming a server with NodeJS and Express](https://github.com/zntb/fullstack-open-part3)
+  - [3.1-3.22: phonebook](https://github.com/zntb/fullstack-open-part3)
