@@ -2,6 +2,8 @@
 
 > This course serves as an introduction to modern web application development with JavaScript. The main focus is on building single page applications with ReactJS that use REST APIs built with Node.js. The course also contains a section on GraphQL, a modern alternative to REST APIs.
 
+**All exercises are saved in a separate commit.**
+
 ## Table of Contents
 
 - [Part 0: Fundamentals of Web apps](./part0)
@@ -17,4 +19,9 @@
   - [2.6-2.11; 2.12-2.15; 2.16-2.17: phonebook](./part2/phonebook)
   - [2.18-2.20: countries](./part2/countries)
 - [Part 3: Programming a server with NodeJS and Express](https://github.com/zntb/fullstack-open-part3)
+
   - [3.1-3.22: phonebook](https://github.com/zntb/fullstack-open-part3)
+
+- [Part 4: Structure of backend application, introduction to testing](https://github.com/zntb/fullstack-open-part4)
+
+  - [4.1-4.6: blog-list](https://github.com/zntb/fullstack-open-part4)
